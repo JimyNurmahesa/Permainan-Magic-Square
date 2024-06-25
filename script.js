@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const generateBtn = document.getElementById('generateBtn');
   const restartBtn = document.getElementById('restartBtn');
   const loadingDiv = document.getElementById('loading');
+  const loadingImg = document.getElementById('loadingImg');
   const resultSection = document.getElementById('resultSection');
-  const magicImg = document.getElementById('magicImg');
-  const magicSquareImg = document.getElementById('magicSquare');
+  const magicSquareDiv = document.getElementById('magicSquare');
 
   generateBtn.addEventListener('click', function () {
     const userNumber = document.getElementById('userNumber').value;
@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('inputSection').style.display = 'none';
 
     // Tampilkan animasi loading
+    loadingImg.src = 'loading.gif'; // Ganti sumber gambar menjadi loading.gif
     loadingDiv.style.display = 'block';
 
     setTimeout(() => {
@@ -43,18 +44,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Sembunyikan hasil dan tombol restart
     resultSection.style.display = 'none';
 
-    // Tampilkan animasi loading magic.gif
-    magicImg.style.display = 'none'; // Sembunyikan magicImg
-    magicSquareImg.style.display = 'block'; // Tampilkan magicSquareImg
+    // Tampilkan animasi magic.gif
+    loadingImg.src = 'magic.gif'; // Ganti sumber gambar menjadi magic.gif
+    loadingDiv.style.display = 'block';
 
-    // Simulasikan penundaan (ganti dengan waktu loading yang sesungguhnya jika diperlukan)
+    // Simulasikan penundaan sebelum kembali menampilkan input
     setTimeout(() => {
       // Sembunyikan animasi loading dan tampilkan input serta tombol "Buat Magic Square"
-      magicImg.style.display = 'block'; // Tampilkan magicImg kembali
-      magicSquareImg.style.display = 'none'; // Sembunyikan magicSquareImg
+      loadingDiv.style.display = 'none';
       document.getElementById('inputSection').style.display = 'block';
-      document.getElementById('loading').style.display = 'none'; // Pastikan loading.gif tidak ditampilkan
-    }, 2000); // Simulasi waktu loading, ganti dengan waktu proses data sesungguhnya
+    }, 3000); // Simulasi waktu loading, ganti dengan waktu proses data sesungguhnya
   });
 
   function displayMagicSquare(square, selectedNumber) {
