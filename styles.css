@@ -22,7 +22,9 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   max-width: 600px; /* Lebar maksimum kontainer */
-  width: 100%; /* Lebar kontainer mengisi layar */
+  width: calc(100% - 40px); /* Lebar kontainer mengisi layar dengan margin 20px di setiap sisi */
+  margin: 0 auto; /* Centering kontainer di tengah layar */
+  overflow: hidden; /* Mengatasi masalah overflow jika ada */
 }
 
 h1 {
@@ -99,6 +101,7 @@ button:hover {
 @media only screen and (max-width: 768px) {
   .container {
     padding: 10px;
+    width: calc(100% - 20px); /* Lebar kontainer dengan margin 10px di setiap sisi */
   }
 
   .result {
