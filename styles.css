@@ -1,6 +1,62 @@
+/* CSS untuk layar kecil (smartphone) */
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  input[type='number'] {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 8px 16px;
+    margin-top: 8px;
+  }
+
+  .result {
+    margin-top: 10px;
+    grid-template-columns: repeat(2, 40px);
+    font-size: 14px;
+  }
+}
+
+/* CSS untuk layar menengah dan besar (tablet dan desktop) */
+@media only screen and (min-width: 601px) {
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  input[type='number'] {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+
+  .result {
+    margin-top: 20px;
+    grid-template-columns: repeat(4, 50px);
+    font-size: 16px;
+  }
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #343434;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,33 +66,23 @@ body {
 
 .container {
   background-color: #fff;
-  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-h1 {
-  margin-bottom: 20px;
-  color: #333;
-}
-
 input[type='number'] {
   padding: 10px;
-  width: 100px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 20px;
 }
 
 button {
-  padding: 10px 20px;
   background-color: #28a745;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
 }
 
 button:hover {
@@ -44,9 +90,7 @@ button:hover {
 }
 
 .result {
-  margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(4, 50px);
   grid-gap: 10px;
 }
 
@@ -82,5 +126,5 @@ button:hover {
 }
 
 #magicImg {
-  display: none; /* Mulai dengan magic.gif disembunyikan */
+  display: none;
 }
