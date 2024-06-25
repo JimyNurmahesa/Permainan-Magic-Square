@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+input[type='number'] {
+  padding: 10px;
+  width: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.result {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-gap: 10px;
+}
+
+.result div {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.selected-number {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#loading {
+  margin-top: 20px;
+}
+
+#resultSection {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#magicSquareContainer {
+  margin-top: 20px;
+}
+
+#magicImg {
+  display: none; /* Mulai dengan magic.gif disembunyikan */
+}
